@@ -1,0 +1,213 @@
+---------- INFORMATION ----------
+
+Book: Deep Learning with Python
+
+---------- LOG ----------
+
+Monday (6/10)
+
+Meeting: Talked about how opencv can be used with images. Also discussed the importance of normilizing images 
+before feeding them into a network.
+Day's Work: Worked through Chapter 5. Completed first convnet neural network and achieved accuracy of .9922 versus .9706!
+
+Tuesday (6/11)
+
+Day's Work: Progress was made on image preprocessing for dogs and cats example from chapter 5. Became comfortable working with
+os and shutil packages to manipulate the local file system. Setup train, validation, and test directories with 2000, 1000,
+and 1000 images respectively of pets(dogs and cats).
+
+Wednesday (6/12)
+
+Day's Work: Watched some videos on Convnets to better understand how they work.
+Read beginning of chapter 5 again in order to better understand convnets. Things
+are not really making sense yet.
+
+Friday(6/14)
+
+Day's Work: Setup cats and dogs convnet and trained the network. Played around
+with settings of the model and layers to see if I could fix the accuracy issue.
+Book says I should be getting nearly 100% accuracy and a case of overfitting but
+my model is only reaching 49% accuracy.
+
+Sunday (6/16)
+
+Day's Work: Still cannot figure out why cats and dogs network is not working right.
+Going to have to ask Dr. Liu in the next meeting for help with this. Still not
+really comfortable with convnets and I feel like I am just typing what is in 
+the book and not fully understanding it. Changed number of epochs to 10 because
+model seems to be lossing accuracy with the recommended 30 epochs. Accuracy
+peaks at epoch #6. Convnet saved to ./dogcat_bad.h5
+
+Monday (6/17)
+
+Meeting: Met with Dr. Liu (Hood) and Dr. Liu (NIH) to discuss moving on from chapter 5. 
+Task for the day is to download medical x-ray images and move them into folders
+based on their classification (what was found wrong on them). Instructed to use python
+script to download images on the server and then extract classification phenotypes
+based off of the .csv file that comes with the images.
+
+Day's Work: Downloaded and extracted image files. Started to work on preprocessing images
+by dividing them up based on their labels. Python code was not working 100% at the end of
+the day.
+
+Tuesday (6/18)
+
+Meeting: Talked about different ways to work with csv files in python. I was using os and 
+shutil but Dr. Liu recommended that I use pandas or numpy to work with such large datasets.
+
+Day's Work: Not much
+
+Wednesday (6/19)
+
+Day's Work: Finished preprocessing script and uploaded to the server. Stil trying to figure
+out how the images need to be classified in order to build a model around them. Hamid and I
+will have questions for tomorrow's meeting so we can better understand what is going on.
+
+Thursday (6/20)
+
+Meeting: Talked about issues with building a model with too many different labels.
+There is the possibility for overfitting in the given data set.
+
+Day's Work: None
+
+Friday (6/21)
+
+Meeting: Reported on progress with model. Tried to follow an example from Kaggle but
+was getting too many errors. Read up a little bit more on python and some useful functions.
+
+Day's Work: Built model according to tutorial but could not get it to train.
+
+Monday (6/24)
+
+Meeting: Reported on progress over the weekend. Found another Kaggle example and
+am trying to implement it now.
+
+Day's Work: None (Vacation)
+
+Tuesday (6/25)
+
+Meeting: Professor had a meeting, there was no morning meeting.
+
+Day's Work: None (Vacation)
+
+Wednesday (6/26)
+
+Meeting: Hamid had a couple of questions about the model not working before moving on.
+We talked about the new example that I found and how I hope to implement it.
+
+Day's Work: Got the model to work. Trained model and tested it on given dataset.
+Model accuracy is very low. Maybe tomorrow I can try some other layer configuration to 
+increase accuracy.
+
+Thursday (6/27)
+
+Meeting: Reported on model. Fairly short meeting.
+
+Day's Work: Improved model accuracy by a couple of percent. Searched through a couple
+papers on the web to try and find the most efficent way to determine the proper layers
+to apply to any model. Pretty much seems to be trial and error.
+
+Friday (6/28)
+
+Meeting: Dr. Liu recommended that we move on because the summer is going by quickly.
+Hamid is taking pretrained networks and I will be concentrating on GANs. The end
+project goal for the summer is using a GAN to create fake x-ray images.
+
+Day's Work: Not much, pushing changes to git and talking with hamid about some details
+in the code of the model.
+
+Monday (7/1)
+
+Meeting: Short meeting, I didn't have much to report on because of my light work load on 
+friday.
+
+Day's Work: Read chapter 8 from the book, formulated some questions.
+
+Tuesday (7/2)
+
+Meeting: Spoke about some questions I had about GANs. Expressed concerns to the professor that
+Hamid and I are having a hard time keeping up because we are learning so much so fast and not
+getting a lot of time to practice it.
+
+Day's Work: Tried some examples from the book just to get a GAN to work and start to understand
+how it works. Unable to train a network. Read through the X-Ray image dataset journal paper
+to help me understand what I am doing with this dataset.
+
+Wednesday (7/3)
+
+Meeting: Unable to attend meeting due to other internship.
+
+Day's Work: None
+
+Thursday (7/4)
+
+Meeting: No meeting for 4th of July
+
+Day's Work: A solid day of working with the GAN examples in the book and still nothing to show for
+it. I will have plenty of questions for Dr. Liu come our next meeting on Monday.
+
+Friday (7/5)
+
+Meeting: No meeting for 4th of July weekend
+
+Day's Work: None
+
+Monday (7/8)
+
+Meeting: Reported on GAN progress. We talked about the difference between discriminators
+and generators. Talked about how to switch tensorflow from CPU to GPU in order to lower
+the amount of time needed to train the GAN.
+
+Day's Work: Worked on GAN and got it to train. Accuracy was 86% but it took over two hours
+to train so I do not think it was trained on the GPU. I need to find information on
+switch to the GPU from the CPU.
+
+Tuesday (7/9)
+
+Meeting: Talked about switch from CPU to GPU and also about accuracy of the network. We decided
+that I should re-train the network even after having a network trained. Will report back on
+how fast the network trains.
+
+Day's Work: Not much. Studying for midterms.
+
+Wednesday (7/10)
+
+Meeting: Dr. Liu instructed us to read the technical journal about the x-ray database.
+We spoke about hamids progress and he too was stuck using the CPU because it took forever to train.
+
+Day's Work: Read chapter 3, the section on using pretrained networks in order to increase accuracy.
+Also read through the journal article associateed with the xray dataset.
+
+Thursday (7/11)
+
+Meeting: We talked about where the pretrained network would fit into our overall goal. Also,
+we created a list of things that need to be done. We are going to have our first meeting
+including the High School interns on Monday and wanted to have some tasks that they could help
+us with. We also talked about the quality of the images in the dataset. They are not all
+high quality so we must decide if we would like to proceed with a lot of data but some of it
+is bad or less data but it is all good.
+
+Day's Work: Looked through dataset to find some images that were bad. Also looking at Age and
+Position that the xray was taken.
+
+Friday (7/12)
+
+Meeting: We talked about getting ready for the first meeting with the high school interns on monday.
+Hamid and I need to finalize the list so we are ready to divide up the tasks.
+
+Day's Work: I searched around to find some different types of GAN models that we could
+use on our dataset. I found one called StarGAN. I want to read the paper on this model
+in order to better understand it.
+
+Monday (7/15)
+
+Meeting: First meeting with the high-school interns. We talked about a couple of different tasks
+to help us get the model off the ground. I explained what I knew about the StarGAN
+model and asked Dr. Liu if we should use it. Also, we talked about getting ready to
+start our paper, poster and presentation.
+
+Day's Work: Read through the abstract of the StarGAN paper. Seems like it would be a
+good idea to try applying the information in the journal article to our model. Results
+were very good in the paper. I also starting skimming through a book on radiology
+in order to allow me to go through and start picking out poor images in the dataset.
+
